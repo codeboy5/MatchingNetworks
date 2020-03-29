@@ -10,11 +10,11 @@ from utils.storage import save_statistics, build_experiment_folder
 tf.reset_default_graph()
 args = get_args()
 # Experiment builder
-data = dataset.FolderDatasetLoader(num_of_gpus=1, batch_size=args.batch_size, image_height=28, image_width=28,
-                                   image_channels=1,
-                                   train_val_test_split=(1200/1622, 211/1622, 211/1622),
+data = dataset.FolderDatasetLoader(num_of_gpus=1, batch_size=args.batch_size, image_height=256, image_width=256,
+                                   image_channels=3,
+                                   train_val_test_split=(0.7, 0.2, 0.1),
                                    samples_per_iter=1, num_workers=4,
-                                   data_path="datasets/omniglot_dataset", name="omniglot_dataset",
+                                   data_path="datasets/dataset", name="disease_dataset",
                                    indexes_of_folders_indicating_class=[-2, -3], reset_stored_filepaths=False,
                                    num_samples_per_class=args.samples_per_class,
                                    num_classes_per_set=args.classes_per_set, label_as_int=False)

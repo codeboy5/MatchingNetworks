@@ -1,6 +1,8 @@
 import os
 import numpy as np
 import cv2
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from torch.utils.data import Dataset, DataLoader
 import tqdm
