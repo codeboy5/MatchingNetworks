@@ -14,8 +14,8 @@ data = dataset.FolderDatasetLoader(num_of_gpus=1, batch_size=args.batch_size, im
                                    image_channels=3,
                                    train_val_test_split=(0.7, 0.2, 0.1),
                                    samples_per_iter=1, num_workers=4,
-                                   data_path="datasets/dataset", name="disease_dataset",
-                                   indexes_of_folders_indicating_class=[-2, -3], reset_stored_filepaths=False,
+                                   data_path="datasets/disease_dataset", name="disease_dataset",
+                                   indexes_of_folders_indicating_class=[-2, -3], reset_stored_filepaths=True,
                                    num_samples_per_class=args.samples_per_class,
                                    num_classes_per_set=args.classes_per_set, label_as_int=False)
 
